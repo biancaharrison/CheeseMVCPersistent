@@ -30,7 +30,7 @@ namespace CheeseMVC.Controllers
 
         public IActionResult Add()
         {
-            AddMenuViewModel addMenuViewModel= new AddMenuViewModel();
+            AddMenuViewModel addMenuViewModel = new AddMenuViewModel();
             return View(addMenuViewModel);
         }
 
@@ -103,7 +103,7 @@ namespace CheeseMVC.Controllers
                     context.SaveChanges();
                 }
 
-                return Redirect($"/Menu/ViewMenu/{addMenuItemViewModel}");
+                return Redirect($"/Menu/ViewMenu/{addMenuItemViewModel.Menu}");
             }
 
             return View(addMenuItemViewModel);
